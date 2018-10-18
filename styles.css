@@ -1,0 +1,83 @@
+:root {
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --header-color: black;
+    --column-color: dimgray;
+    --content-color: white;
+    --footer-color: darkseagreen;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: var(--header-color);
+    color: white;
+    font-size: 3rem;
+    font-weight: lighter;
+    padding: .5rem;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    background: #999;
+    color: #000; 
+}
+
+.columns {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    order: 2;
+    background: var(--content-color);
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+
+.column {
+    width: 20%;
+    background-color: var(--column-color);
+    color: white;
+    font-size: 1.5rem;
+    padding: .5rem;
+    
+}
+
+.left-column {
+    order: 1;
+}
+
+.right-column { 
+    order: 3;
+}
+
+.footer {
+    padding: .5rem;
+    font-size: 1.7rem;
+    background-color: var(--footer-color);
+}
+
+@media (min-width: 600px) {
+    .columns {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+        height: 20%;
+        width: initial
+    }
+}
